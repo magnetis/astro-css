@@ -5,7 +5,7 @@
   "homepage": "https://astro.magnetis.com.br/",
   "description": "Magnetis design system",
   "bugs": {
-    "url": "https://github.com/magnetis/astro/issues"
+    "url": "https://github.com/magnetis/astro-css/issues"
   },
   "files": [
     "dist"
