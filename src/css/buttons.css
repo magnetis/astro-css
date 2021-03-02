@@ -1,0 +1,535 @@
+/* Please don't change the order of the style blocks in this file as it may break the cascade */
+
+/* Base button styles */
+
+.a-btn {
+  display: inline-block;
+  overflow: hidden;
+  font: var(--font-primary);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.a-btn:disabled,
+.a-btn.a-btn--disabled {
+  color: var(--color-space-100);
+  cursor: not-allowed;
+  background-color: var(--color-moon-200);
+  border-color: var(--color-moon-200);
+}
+
+.a-btn:focus {
+  outline: none;
+}
+
+/* Button color modifiers */
+
+.a-btn--uranus {
+  color: var(--color-space-100);
+  background-color: var(--color-uranus-500);
+  border: 2px solid var(--color-uranus-500);
+}
+
+.a-btn--uranus:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--uranus:focus:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-uranus-300);
+  border-color: var(--color-uranus-300);
+}
+
+.a-btn--uranus:active:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-uranus-600);
+  border-color: var(--color-uranus-600);
+}
+
+.a-btn--venus {
+  color: var(--color-space-100);
+  background-color: var(--color-venus-400);
+  border: 2px solid var(--color-venus-400);
+}
+
+.a-btn--venus:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--venus:focus:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-venus-200);
+  border-color: var(--color-venus-200);
+}
+
+.a-btn--venus:active:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-venus-500);
+  border-color: var(--color-venus-500);
+}
+
+.a-btn--mars {
+  color: var(--color-space-100);
+  background-color: var(--color-mars-500);
+  border: 2px solid var(--color-mars-500);
+}
+
+.a-btn--mars:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--mars:focus:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-mars-300);
+  border-color: var(--color-mars-300);
+}
+
+.a-btn--mars:active:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-mars-600);
+  border-color: var(--color-mars-600);
+}
+
+.a-btn--earth {
+  color: var(--color-moon-900);
+  background-color: var(--color-earth-400);
+  border: 2px solid var(--color-earth-400);
+}
+
+.a-btn--earth:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--earth:focus:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-earth-200);
+  border-color: var(--color-earth-200);
+}
+
+.a-btn--earth:active:not(:disabled):not(.a-btn--disabled) {
+  background-color: var(--color-earth-500);
+  border-color: var(--color-earth-500);
+}
+
+/* Outline button */
+
+.a-btn--outline-uranus {
+  color: var(--color-uranus-500);
+  background-color: transparent;
+  border: 2px solid var(--color-uranus-500);
+}
+
+.a-btn--outline-uranus:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--outline-uranus:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-space-100);
+  background-color: var(--color-uranus-400);
+  border-color: var(--color-uranus-400);
+}
+
+.a-btn--outline-uranus:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-space-100);
+  background-color: var(--color-uranus-600);
+  border-color: var(--color-uranus-600);
+}
+
+.a-btn--outline-venus {
+  color: var(--color-venus-400);
+  background-color: transparent;
+  border: 2px solid var(--color-venus-400);
+}
+
+.a-btn--outline-venus:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--outline-venus:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-space-100);
+  background-color: var(--color-venus-300);
+  border-color: var(--color-venus-300);
+}
+
+.a-btn--outline-venus:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-space-100);
+  background-color: var(--color-venus-500);
+  border-color: var(--color-venus-500);
+}
+
+.a-btn--outline-earth {
+  color: var(--color-earth-600);
+  background-color: transparent;
+  border: 2px solid var(--color-earth-600);
+}
+
+.a-btn--outline-earth:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--outline-earth:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-moon-900);
+  background-color: var(--color-earth-300);
+  border-color: var(--color-earth-300);
+}
+
+.a-btn--outline-earth:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-moon-900);
+  background-color: var(--color-earth-500);
+  border-color: var(--color-earth-500);
+}
+
+.a-btn--outline-mars {
+  color: var(--color-mars-500);
+  background-color: transparent;
+  border: 2px solid var(--color-mars-500);
+}
+
+.a-btn--outline-mars:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--outline-mars:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-space-100);
+  background-color: var(--color-mars-400);
+  border-color: var(--color-mars-400);
+}
+
+.a-btn--outline-mars:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-space-100);
+  background-color: var(--color-mars-600);
+  border-color: var(--color-mars-600);
+}
+
+.a-btn--outline-uranus:disabled,
+.a-btn--outline-venus:disabled,
+.a-btn--outline-earth:disabled,
+.a-btn--outline-mars:disabled,
+.a-btn--outline-uranus.a-btn--disabled,
+.a-btn--outline-venus.a-btn--disabled,
+.a-btn--outline-earth.a-btn--disabled,
+.a-btn--outline-mars.a-btn--disabled {
+  color: var(--color-moon-200);
+  cursor: not-allowed;
+  background-color: transparent;
+  border-color: var(--color-moon-200);
+}
+
+/* Ghost button base */
+
+.a-btn--ghost-uranus {
+  color: var(--color-uranus-500);
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.a-btn--ghost-uranus:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--ghost-uranus:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-uranus-400);
+  background-color: var(--color-moon-100);
+  border-color: var(--color-moon-100);
+}
+
+.a-btn--ghost-uranus:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-uranus-600);
+  background-color: var(--color-moon-200);
+  border-color: var(--color-moon-200);
+}
+
+.a-btn--ghost-venus {
+  color: var(--color-venus-400);
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.a-btn--ghost-venus:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--ghost-venus:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-venus-300);
+  background-color: var(--color-moon-100);
+  border-color: var(--color-moon-100);
+}
+
+.a-btn--ghost-venus:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-venus-500);
+  background-color: var(--color-moon-200);
+  border-color: var(--color-moon-200);
+}
+
+.a-btn--ghost-earth {
+  color: var(--color-earth-600);
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.a-btn--ghost-earth:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--ghost-earth:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-earth-300);
+  background-color: var(--color-moon-100);
+  border-color: var(--color-moon-100);
+}
+
+.a-btn--ghost-earth:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-earth-800);
+  background-color: var(--color-moon-200);
+  border-color: var(--color-moon-200);
+}
+
+.a-btn--ghost-mars {
+  color: var(--color-mars-500);
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.a-btn--ghost-mars:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--ghost-mars:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-mars-400);
+  background-color: var(--color-moon-100);
+  border-color: var(--color-moon-100);
+}
+
+.a-btn--ghost-mars:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-mars-600);
+  background-color: var(--color-moon-200);
+  border-color: var(--color-moon-200);
+}
+
+.a-btn--ghost-uranus:disabled,
+.a-btn--ghost-venus:disabled,
+.a-btn--ghost-earth:disabled,
+.a-btn--ghost-mars:disabled,
+.a-btn--ghost-uranus.a-btn--disabled,
+.a-btn--ghost-venus.a-btn--disabled,
+.a-btn--ghost-earth.a-btn--disabled,
+.a-btn--ghost-mars.a-btn--disabled {
+  color: var(--color-moon-200);
+  cursor: not-allowed;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Iconlabel button */
+
+.a-btn--iconlabel .a-icon {
+  margin: -4px 9px -3px 0;
+  background-color: var(--color-space-100);
+  transition: all 0.3s ease;
+}
+
+.a-btn--iconlabel-right .a-icon {
+  margin: -4px 0 -3px 9px;
+}
+
+.a-btn--iconlabel.a-btn--earth .a-icon {
+  background-color: var(--color-moon-900);
+}
+
+/* Icon button */
+
+.a-btn--icon .a-icon {
+  margin: -4px 0 -3px;
+  background-color: var(--color-space-100);
+  transition: all 0.3s ease;
+}
+
+/* Outline iconlabel button */
+
+.a-btn--outline-uranus .a-icon {
+  background-color: var(--color-uranus-500);
+}
+
+.a-btn--outline-venus .a-icon {
+  background-color: var(--color-venus-400);
+}
+
+.a-btn--outline-earth .a-icon {
+  background-color: var(--color-earth-600);
+}
+
+.a-btn--outline-mars .a-icon {
+  background-color: var(--color-mars-500);
+}
+
+.a-btn--outline-uranus:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-venus:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-mars:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-uranus:active:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-venus:active:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-mars:active:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-uranus:focus:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-venus:focus:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-mars:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-space-100);
+}
+
+.a-btn--outline-earth:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-earth:active:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--outline-earth:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-moon-900);
+}
+
+.a-btn--outline-uranus:disabled .a-icon,
+.a-btn--outline-venus:disabled .a-icon,
+.a-btn--outline-earth:disabled .a-icon,
+.a-btn--outline-mars:disabled .a-icon,
+.a-btn--outline-uranus.a-btn--disabled .a-icon,
+.a-btn--outline-venus.a-btn--disabled .a-icon,
+.a-btn--outline-earth.a-btn--disabled .a-icon,
+.a-btn--outline-mars.a-btn--disabled .a-icon {
+  background-color: var(--color-moon-200);
+}
+
+/* Ghost iconlabel button */
+
+.a-btn--ghost-uranus .a-icon {
+  background-color: var(--color-uranus-500);
+}
+
+.a-btn--ghost-uranus:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--ghost-uranus:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-uranus-400);
+}
+
+.a-btn--ghost-uranus:active:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-uranus-600);
+}
+
+.a-btn--ghost-venus .a-icon {
+  background-color: var(--color-venus-400);
+}
+
+.a-btn--ghost-venus:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--ghost-venus:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-venus-300);
+}
+
+.a-btn--ghost-venus:active:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-venus-500);
+}
+
+.a-btn--ghost-earth .a-icon {
+  background-color: var(--color-earth-600);
+}
+
+.a-btn--ghost-earth:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--ghost-earth:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-earth-300);
+}
+
+.a-btn--ghost-earth:active:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-earth-800);
+}
+
+.a-btn--ghost-mars .a-icon {
+  background-color: var(--color-mars-500);
+}
+
+.a-btn--ghost-mars:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--ghost-mars:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-mars-400);
+}
+
+.a-btn--ghost-mars:active:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-mars-600);
+}
+
+.a-btn--ghost-uranus:disabled .a-icon,
+.a-btn--ghost-venus:disabled .a-icon,
+.a-btn--ghost-earth:disabled .a-icon,
+.a-btn--ghost-mars:disabled .a-icon,
+.a-btn--ghost-uranus.a-btn--disabled .a-icon,
+.a-btn--ghost-venus.a-btn--disabled .a-icon,
+.a-btn--ghost-earth.a-btn--disabled .a-icon,
+.a-btn--ghost-mars.a-btn--disabled .a-icon {
+  background-color: var(--color-moon-200);
+}
+
+/* Icon link button */
+
+.a-btn--iconlink {
+  display: inline-block;
+  overflow: hidden;
+  font: var(--font-secondary);
+  color: var(--color-space-100);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.a-btn--iconlink:hover:not(:disabled):not(.a-btn--disabled),
+.a-btn--iconlink:focus:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-uranus-500);
+  outline: none;
+}
+
+.a-btn--iconlink:active:not(:disabled):not(.a-btn--disabled) {
+  color: var(--color-uranus-800);
+}
+
+.a-btn--iconlink:hover:not(:disabled):not(.a-btn--disabled) .a-icon,
+.a-btn--iconlink:focus:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-uranus-500);
+}
+
+.a-btn--iconlink:active:not(:disabled):not(.a-btn--disabled) .a-icon {
+  background-color: var(--color-uranus-800);
+}
+
+.a-btn--iconlink .a-icon {
+  margin: -4px 9px -3px 0;
+  background-color: var(--color-space-100);
+  transition: all 0.3s ease;
+}
+
+.a-btn--iconlink-right .a-icon {
+  margin: -4px 0 -3px 9px;
+}
+
+.a-btn--iconlink.a-btn--iconlink-bold {
+  font-weight: 700;
+}
+
+.a-btn--iconlink:disabled,
+.a-btn--iconlink.a-btn--disabled {
+  color: var(--color-moon-200);
+  cursor: not-allowed;
+}
+
+.a-btn--iconlink:disabled .a-icon,
+.a-btn--iconlink.a-btn--disabled .a-icon {
+  background-color: var(--color-moon-200);
+}
+
+/* Button size modifiers */
+
+.a-btn--small {
+  padding: 5px 28px;
+  font-size: var(--font-size-1-5base);
+  line-height: 18px;
+  border-radius: 16px;
+}
+
+.a-btn--medium {
+  padding: 8px 38px;
+  font-size: var(--font-size-2base);
+  line-height: 28px;
+  border-radius: 24px;
+}
+
+.a-btn--large {
+  padding: 12px 46px;
+  font-size: var(--font-size-3base);
+  line-height: 35px;
+  border-radius: 31px;
+}
+
+.a-btn--icon.a-btn--small {
+  padding: 5px 2px;
+}
+
+.a-btn--icon.a-btn--medium {
+  padding: 8px 6px;
+}
+
+.a-btn--icon.a-btn--large {
+  padding: 11px 9px;
+}
+
+/* Inline link */
+
+.a-link {
+  color: var(--color-uranus-700);
+  text-decoration: underline;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.a-link:hover {
+  color: var(--color-uranus-500);
+}
+
+.a-link:active {
+  color: var(--color-uranus-800);
+}
+
+.a-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+a.a-btn {
+  text-decoration: none;
+}

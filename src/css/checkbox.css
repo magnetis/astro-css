@@ -1,0 +1,94 @@
+:root {
+  --checkbox-square-size: 16px;
+}
+
+.a-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.a-checkbox > label {
+  padding-left: 8px;
+  font: var(--font-secondary);
+  cursor: pointer;
+  order: 2;
+}
+
+.a-checkbox--disabled > label {
+  color: var(--color-moon-200);
+  cursor: not-allowed;
+}
+
+.a-checkbox > input[type='checkbox'] {
+  position: absolute;
+  z-index: var(--z-index-1);
+  width: var(--checkbox-square-size);
+  height: var(--checkbox-square-size);
+  cursor: pointer;
+  opacity: 0;
+  order: 1;
+}
+
+.a-checkbox__shape {
+  position: relative;
+  line-height: 0;
+}
+
+.a-checkbox__shape::before {
+  display: inline-block;
+  width: var(--checkbox-square-size);
+  height: var(--checkbox-square-size);
+  content: '';
+  border: 2px solid var(--color-moon-500);
+  border-radius: 2px;
+}
+
+.a-checkbox__shape::after {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 10px;
+  height: 6px;
+  color: var(--color-space-100);
+  content: '';
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg);
+}
+
+.a-checkbox--indeterminate > .a-checkbox__shape::after {
+  top: 8px;
+  left: 4px;
+  width: 8px;
+  border-left: 0;
+  transform: rotate(-180deg);
+}
+
+.a-checkbox--indeterminate > input[type='checkbox']:disabled ~ .a-checkbox__shape::before {
+  background-color: var(--color-moon-200);
+}
+
+.a-checkbox > input[type='checkbox']:focus ~ .a-checkbox__shape::before {
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+.a-checkbox > input[type='checkbox']:checked ~ .a-checkbox__shape::before {
+  background-color: var(--color-uranus-500);
+  border-color: var(--color-uranus-500);
+}
+
+.a-checkbox > input[type='checkbox']:disabled ~ .a-checkbox__shape::before {
+  border-color: var(--color-moon-200);
+}
+
+.a-checkbox > input[type='checkbox']:checked:disabled ~ .a-checkbox__shape::before {
+  background-color: var(--color-moon-200);
+}
+
+.a-checkbox > input[type='checkbox']:disabled {
+  cursor: not-allowed;
+}
+
+.a-checkbox > input[type='checkbox']:hover:not(:disabled) ~ .a-checkbox__shape::before {
+  border-color: var(--color-uranus-500);
+}

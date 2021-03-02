@@ -1,0 +1,182 @@
+/* Base */
+
+.a-tabs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Border */
+
+.a-tabs__border {
+  position: absolute;
+  z-index: var(--z-index-1);
+  display: block;
+  width: 100%;
+  height: 48px;
+  border: solid 1px var(--color-moon-300);
+  border-radius: 24px;
+}
+
+/* Default component */
+
+.a-tabs > .a-tabs__item {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Tab */
+
+.a-tabs > .a-tabs__label {
+  z-index: var(--z-index-2);
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 32px;
+  margin: 4px 0;
+  font: var(--font-primary);
+  font-size: var(--font-size-1-5base);
+  font-weight: 600;
+  color: var(--color-moon-500);
+  text-align: center;
+  text-transform: lowercase;
+  white-space: nowrap;
+  border: none;
+  border-radius: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.a-tabs > .a-tabs__label:first-of-type {
+  margin-left: 4px;
+}
+
+.a-tabs > .a-tabs__label:last-of-type {
+  margin-right: 4px;
+}
+
+/* Icon */
+
+.a-tabs__icon {
+  min-width: 16px;
+  background-color: var(--color-moon-500);
+  transition: background-color 0.3s ease;
+}
+
+/* Contents */
+
+.a-tabs > .a-tabs__content {
+  display: none;
+  width: 100%;
+  padding: 16px;
+  order: 99;
+}
+
+/* Current content */
+
+.a-tabs > .a-tabs__item:checked + .a-tabs__label + .a-tabs__content {
+  display: block;
+}
+
+/* Focus state */
+
+.a-tabs > .a-tabs__item:focus + .a-tabs__label {
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+/* Active state */
+
+.a-tabs > .a-tabs__item:checked + .a-tabs__label {
+  color: var(--color-space-100);
+  background-color: var(--color-uranus-500);
+}
+
+.a-tabs > .a-tabs__item:checked + .a-tabs__label .a-tabs__icon {
+  background-color: var(--color-moon-100);
+}
+
+/* Hover state */
+
+.a-tabs > .a-tabs__item:not(:checked):hover + .a-tabs__label {
+  cursor: pointer;
+  background-color: var(--color-moon-200);
+}
+
+@media only screen and (max-width: 47em) {
+  /* Small screens or not horizontal tabs */
+
+  .a-tabs:not(.a-tabs--horizontal) .a-tabs__border {
+    display: none;
+  }
+
+  .a-tabs:not(.a-tabs--horizontal) > .a-tabs__label {
+    border: solid 1px var(--color-moon-300);
+    flex: auto;
+  }
+
+  .a-tabs:not(.a-tabs--horizontal) > .a-tabs__label:first-of-type {
+    margin-left: 0;
+  }
+
+  .a-tabs:not(.a-tabs--horizontal) > .a-tabs__label:last-of-type {
+    margin-right: 0;
+  }
+
+  /* Hover state */
+
+  .a-tabs:not(.a-tabs--horizontal) > .a-tabs__item:checked + .a-tabs__label {
+    border-color: var(--color-uranus-500);
+  }
+}
+
+/* 2020 tabs component */
+
+.a-tabbed__list {
+  padding: 0;
+}
+
+.a-tabbed__list li,
+.a-tabbed__list a {
+  display: inline-block;
+}
+
+.a-tabbed__list a {
+  padding: 10px 20px 8px;
+  font: var(--font-primary);
+  font-size: var(--font-size-1-5base);
+  line-height: 26px;
+  color: var(--color-moon-500);
+  text-decoration: none;
+}
+
+.a-tabbed__list li a {
+  vertical-align: middle;
+  border-bottom: 2px solid var(--color-moon-300);
+}
+
+.a-tabbed__list a:hover {
+  color: var(--color-moon-300);
+  border-bottom: 2px solid var(--color-moon-200);
+}
+
+.a-tabbed__list [aria-selected='true'] {
+  color: var(--color-uranus-500);
+  border-bottom: 2px solid var(--color-uranus-500);
+}
+
+.a-tabbed__list .a-tabbed__icon {
+  position: relative;
+  top: -2px;
+  background-color: var(--color-moon-900);
+}
+
+.a-tabbed__list [aria-selected='true'] .a-tabbed__icon {
+  background-color: var(--color-uranus-500);
+}
+
+.a-tabbed__list a:hover .a-tabbed__icon {
+  background-color: var(--color-space-400);
+}

@@ -1,0 +1,74 @@
+/* Default styles */
+
+.a-text--display,
+.a-title--large,
+.a-title--medium,
+.a-title--small,
+.a-text--large,
+.a-text--medium,
+.a-text--small,
+.a-text--very-small {
+  font: var(--font-primary);
+  color: var(--font-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.a-text--secondary-large,
+.a-text--secondary-medium,
+.a-text--secondary-small,
+.a-text--secondary-very-small {
+  font: var(--font-secondary);
+  color: var(--font-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display */
+
+.a-text--display {
+  font-size: var(--font-size-8base);
+  font-weight: 700;
+}
+
+/* Title */
+
+.a-title--large {
+  font-size: var(--font-size-6base);
+}
+
+.a-title--medium {
+  font-size: var(--font-size-5base);
+}
+
+.a-title--small {
+  font-size: var(--font-size-4base);
+}
+
+/* Paragraph */
+
+.a-text--large {
+  font-size: var(--font-size-3base);
+}
+
+.a-text--small {
+  font-size: var(--font-size-1-75base);
+}
+
+.a-text--very-small {
+  font-size: var(--font-size-1-5base);
+}
+
+/* Secondary font */
+
+.a-text--secondary-large {
+  font-size: var(--font-size-3base);
+}
+
+.a-text--secondary-small {
+  font-size: var(--font-size-1-75base);
+}
+
+.a-text--secondary-very-small {
+  font-size: var(--font-size-1-5base);
+}

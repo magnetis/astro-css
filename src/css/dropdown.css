@@ -1,0 +1,191 @@
+/* Base elements */
+
+.a-dropdown {
+  position: relative;
+}
+
+.a-dropdown label {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font: var(--font-secondary);
+  font-size: var(--font-size-1-5base);
+  font-weight: 700;
+  color: var(--color-moon-400);
+  pointer-events: none;
+}
+
+.a-dropdown input {
+  width: 100%;
+  padding: 24px 56px 4px 16px;
+  appearance: none;
+  font: var(--font-secondary);
+  color: var(--font-color);
+  background-color: var(--color-space-100);
+  border: 1px solid var(--color-moon-500);
+  border-radius: 8px;
+}
+
+.a-dropdown span {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-moon-300);
+  mask-image: url('../../assets/icons/drop-down.svg');
+}
+
+.a-dropdown input::placeholder {
+  color: var(--color-moon-400);
+}
+
+/* Options list */
+
+.a-dropdown input ~ ul {
+  position: absolute;
+  z-index: var(--z-index-1);
+  display: none;
+  width: 100%;
+  min-height: 2em;
+  padding-bottom: 16px;
+  margin: 0;
+  background-color: var(--color-space-100);
+  border-color: var(--color-uranus-500);
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 8px 8px;
+}
+
+.a-dropdown input ~ ul a {
+  display: block;
+  padding: 4px 16px;
+  font: var(--font-secondary);
+  color: var(--color-moon-300);
+}
+
+.a-dropdown input ~ ul a:hover {
+  color: var(--color-moon-400);
+  cursor: pointer;
+  background-color: #f1f8fe;
+}
+
+.a-dropdown input ~ ul a em {
+  font-style: normal;
+  color: var(--color-uranus-500);
+}
+
+/* Opened state */
+
+.a-dropdown.a-dropdown--opened input,
+.a-dropdown input:focus {
+  border-color: var(--color-uranus-500);
+  outline: none;
+}
+
+.a-dropdown.a-dropdown--opened input {
+  border-bottom-color: transparent;
+  border-radius: 8px 8px 0 0;
+}
+
+.a-dropdown input:focus ~ label,
+.a-dropdown.a-dropdown--opened input ~ label {
+  color: var(--color-uranus-500);
+}
+
+.a-dropdown.a-dropdown--opened input ~ span {
+  background-color: var(--color-uranus-500);
+  mask-image: url('../../assets/icons/drop-up.svg');
+}
+
+.a-dropdown.a-dropdown--opened input ~ ul {
+  display: block;
+}
+
+/* Search variant */
+
+.a-dropdown.a-dropdown--search span {
+  top: 8px;
+  background-color: var(--color-moon-600);
+  mask-image: url('../../assets/icons/magnifier.svg');
+}
+
+.a-dropdown.a-dropdown--search.a-dropdown--opened input ~ span {
+  background-color: var(--color-uranus-500);
+  mask-image: url('../../assets/icons/magnifier.svg');
+}
+
+.a-dropdown span:hover,
+.a-dropdown.a-dropdown--search span:hover {
+  cursor: pointer;
+  background-color: var(--color-uranus-500);
+}
+
+.a-dropdown.a-dropdown--search label {
+  display: none;
+}
+
+.a-dropdown.a-dropdown--search input {
+  padding: 12px 16px;
+}
+
+/* Disabled state */
+
+.a-dropdown.a-dropdown--disabled input,
+.a-dropdown.a-dropdown--disabled span {
+  color: var(--color-moon-300);
+  cursor: not-allowed;
+  background-color: var(--color-moon-100);
+  border: 1px solid var(--color-moon-200);
+}
+
+/* Validated state */
+
+.a-dropdown.a-dropdown--validated input,
+.a-dropdown.a-dropdown--validated.a-dropdown--opened input ~ ul {
+  border-color: var(--color-earth-400);
+}
+
+.a-dropdown.a-dropdown--validated.a-dropdown--opened input {
+  border-bottom-color: transparent;
+}
+
+.a-dropdown.a-dropdown--validated input:focus ~ label,
+.a-dropdown.a-dropdown--validated.a-dropdown--opened input ~ label {
+  color: var(--color-earth-600);
+}
+
+.a-dropdown.a-dropdown--validated span {
+  mask-image: url('../../assets/icons/circle-check.svg');
+}
+
+.a-dropdown.a-dropdown--validated span,
+.a-dropdown.a-dropdown--validated.a-dropdown--opened input ~ span {
+  background-color: var(--color-earth-400);
+}
+
+/* Invalid state */
+
+.a-dropdown.a-dropdown--invalid input,
+.a-dropdown.a-dropdown--invalid.a-dropdown--opened input ~ ul {
+  border-color: var(--color-mars-500);
+}
+
+.a-dropdown.a-dropdown--invalid.a-dropdown--opened input {
+  border-bottom-color: transparent;
+}
+
+.a-dropdown.a-dropdown--invalid input:focus ~ label,
+.a-dropdown.a-dropdown--invalid.a-dropdown--opened input ~ label {
+  color: var(--color-mars-500);
+}
+
+.a-dropdown.a-dropdown--invalid span {
+  mask-image: url('../../assets/icons/alert.svg');
+}
+
+.a-dropdown.a-dropdown--invalid span,
+.a-dropdown.a-dropdown--invalid.a-dropdown--opened input ~ span {
+  background-color: var(--color-mars-500);
+}
