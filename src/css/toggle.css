@@ -1,0 +1,111 @@
+/* Variables */
+
+:root {
+  --toggle-base-width: 50px;
+  --toggle-base-height: 30px;
+  --toggle-circle-size: 28px;
+}
+
+/* Base */
+
+.a-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide standard input */
+
+.a-toggle > input[type='checkbox'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-1);
+  width: 100%;
+  height: var(--toggle-base-height);
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* Label */
+
+.a-toggle > label {
+  padding-right: 8px;
+  font: var(--font-secondary);
+}
+
+/* Base */
+
+.a-toggle__shape {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.a-toggle__shape::before {
+  display: block;
+  width: var(--toggle-base-width);
+  height: var(--toggle-base-height);
+  content: '';
+  background-color: var(--color-moon-400);
+  border-radius: var(--toggle-circle-size);
+  transition: background-color 0.3s ease;
+}
+
+/* Circle */
+
+.a-toggle__shape::after {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: block;
+  width: var(--toggle-circle-size);
+  height: var(--toggle-circle-size);
+  visibility: visible;
+  content: '';
+  background-color: var(--color-space-100);
+  border-radius: var(--toggle-circle-size);
+  transition: left 0.3s ease;
+}
+
+/* On state */
+
+.a-toggle > input[type='checkbox']:checked ~ .a-toggle__shape::before {
+  background-color: var(--color-uranus-500);
+}
+
+.a-toggle > input[type='checkbox']:checked ~ .a-toggle__shape::after {
+  top: 1px;
+  left: 21px;
+}
+
+/* Disabled state */
+
+.a-toggle > input[type='checkbox']:disabled ~ .a-toggle__shape::before {
+  background-color: var(--color-moon-200);
+}
+
+.a-toggle--disabled label,
+.a-toggle > input[type='checkbox']:disabled {
+  color: var(--color-moon-200);
+  cursor: not-allowed;
+}
+
+/* Focus state */
+
+.a-toggle > input[type='checkbox']:focus ~ .a-toggle__shape::before {
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+}
+
+/* Hover state on */
+
+.a-toggle > input[type='checkbox']:not(:disabled):hover ~ .a-toggle__shape::before {
+  background-color: var(--color-uranus-400);
+}
+
+/* Hover state off */
+
+.a-toggle > input[type='checkbox']:not(:checked):not(:disabled):hover ~ .a-toggle__shape::before {
+  background-color: var(--color-moon-300);
+}

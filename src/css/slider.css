@@ -1,0 +1,203 @@
+/* Variables - insert current slider value with JS in this variable to get a working color fill */
+
+:root {
+  --slider-percentage: 50%;
+}
+
+.a-slider {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Reset standard input styles */
+
+.a-slider > input[type='range'] {
+  width: 100%;
+  outline: none;
+  appearance: none;
+}
+
+/* Labels */
+
+.a-slider > label {
+  display: flex;
+  margin-bottom: 20px;
+  font: var(--font-secondary);
+  color: var(--font-color);
+  order: 1;
+}
+
+.a-slider__value {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.a-slider > input[type='range']:disabled ~ label {
+  color: var(--color-moon-200);
+}
+
+/* Chrome - always replicate styles for each browser, it's the only way :( */
+
+.a-slider > input[type='range']::-webkit-slider-runnable-track {
+  display: flex;
+  height: 5px;
+  background-color: var(--color-moon-300);
+  background-image:
+    linear-gradient(
+      to right,
+      var(--color-uranus-500) var(--slider-percentage),
+      transparent var(--slider-percentage)
+    );
+  border-radius: 4px;
+  align-items: center;
+}
+
+.a-slider.a-slider--full > input[type='range']::-webkit-slider-runnable-track {
+  background-image: var(--gradient-cartwheel);
+}
+
+.a-slider > input[type='range']::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-space-100);
+  border-radius: 100%;
+  box-shadow: 0 1px 4px 0 rgba(135, 135, 135, 0.5);
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+.a-slider > input[type='range']:not(:disabled)::-webkit-slider-thumb:hover,
+.a-slider > input[type='range']:focus::-webkit-slider-thumb {
+  width: 36px;
+  height: 36px;
+}
+
+.a-slider > input[type='range']:not(:disabled)::-webkit-slider-thumb:active {
+  width: 40px;
+  height: 40px;
+}
+
+.a-slider > input[type='range']:disabled::-webkit-slider-runnable-track {
+  cursor: not-allowed;
+  background-color: var(--color-moon-200);
+  background-image: none;
+}
+
+.a-slider > input[type='range']:disabled::-webkit-slider-thumb {
+  display: none;
+}
+
+/* Firefox - always replicate styles for each browser, it's the only way :(
+  Some styles below are slightly different from Chrome */
+
+.a-slider > input[type='range']::-moz-range-track {
+  display: flex;
+  height: 5px;
+  background-color: var(--color-moon-300);
+  background-image:
+    linear-gradient(
+      to right,
+      var(--color-uranus-500) var(--slider-percentage),
+      transparent var(--slider-percentage)
+    );
+  border-radius: 4px;
+  align-items: center;
+}
+
+.a-slider.a-slider--full > input[type='range']::-moz-range-track {
+  background-image: var(--gradient-cartwheel);
+}
+
+.a-slider > input[type='range']::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-space-100);
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 1px 4px 0 rgba(135, 135, 135, 0.5);
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+.a-slider > input[type='range']:not(:disabled)::-moz-range-thumb:hover {
+  width: 36px;
+  height: 36px;
+}
+
+.a-slider > input[type='range']:not(:disabled)::-moz-range-thumb:active {
+  width: 40px;
+  height: 40px;
+}
+
+.a-slider > input[type='range']:disabled {
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.a-slider > input[type='range']:disabled::-moz-range-track {
+  cursor: not-allowed;
+  background-color: var(--color-moon-200);
+  background-image: none;
+}
+
+.a-slider > input[type='range']:disabled::-moz-range-thumb {
+  visibility: hidden;
+}
+
+/* IE - always replicate styles for each browser, it's the only way :( */
+
+.a-slider > input[type='range']::-ms-track {
+  display: flex;
+  height: 5px;
+  background-color: var(--color-moon-300);
+  background-image:
+    linear-gradient(
+      to right,
+      var(--color-uranus-500) var(--slider-percentage),
+      transparent var(--slider-percentage)
+    );
+  border-radius: 4px;
+  align-items: center;
+}
+
+.a-slider.a-slider--full > input[type='range']::-ms-track {
+  background-image: var(--gradient-cartwheel);
+}
+
+.a-slider > input[type='range']::-ms-thumb {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-space-100);
+  border-radius: 100%;
+  box-shadow: 0 1px 4px 0 rgba(135, 135, 135, 0.5);
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+.a-slider > input[type='range']:not(:disabled)::-ms-thumb:hover {
+  width: 36px;
+  height: 36px;
+}
+
+.a-slider > input[type='range']:not(:disabled)::-ms-thumb:active {
+  width: 40px;
+  height: 40px;
+}
+
+.a-slider > input[type='range']:disabled::-ms-track {
+  cursor: not-allowed;
+  background-color: var(--color-moon-200);
+  background-image: none;
+}
+
+.a-slider > input[type='range']:disabled::-ms-thumb {
+  display: none;
+}
+
+.a-slider--disabled > label {
+  color: var(--color-moon-200);
+  cursor: not-allowed;
+}
