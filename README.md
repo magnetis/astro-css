@@ -4,7 +4,7 @@
 
 ### A design system by Magnetis 👩‍🚀
 
-[![Build Status](https://travis-ci.org/magnetis/astro.svg?branch=main)](https://travis-ci.org/magnetis/astro)
+[![Build Status](https://travis-ci.org/magnetis/astro.svg?branch=main)](https://travis-ci.org/magnetis/astro-css)
 
 ## Table of contents
 
