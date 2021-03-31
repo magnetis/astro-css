@@ -1,9 +1,9 @@
 {
   "name": "@magnetis/astro-css",
-  "version": "3.3.0",
+  "version": "1.0.0",
   "author": "Magnetis (https://github.com/magnetis)",
   "homepage": "https://astro.magnetis.com.br/",
-  "description": "Magnetis design system",
+  "description": "CSS Implementation of Magnetis design system",
   "bugs": {
     "url": "https://github.com/magnetis/astro-css/issues"
   },
@@ -22,8 +22,7 @@
   },
   "scripts": {
     "build": "postcss src/index.css -o dist/astro.css && svgo assets/icons/*.svg -o dist/assets/icons",
-    "lint": "yarn lint:css && yarn lint:js",
-    "lint:js": "eslint docs/**/*.js*",
+    "lint": "yarn lint:css",
     "lint:css": "stylelint src/css/**/*.css",
     "ci:build": "yarn lint && yarn build"
   },
