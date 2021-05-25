@@ -21,3 +21,6 @@ package-lock.json
 
 # OS things
 *.DS_Store
+
+# Optional usage index.html as showroom of components
+index.html
