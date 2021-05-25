@@ -21,3 +21,6 @@ package-lock.json
 
 # OS things
 *.DS_Store
+
+# Sometimes to test on html
+index.html
