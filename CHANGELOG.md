@@ -8,4 +8,4 @@ This page documents interesting or noteworthy changes to the project, based on [
 
 ### [1.1.0] - 2021-05-26
 
-- Create badge pills css
+- Add badge pills css
