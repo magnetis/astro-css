@@ -1,15 +1,27 @@
 # What
 
-_Description of what you did._
+<!-- Briefly describe the goal of this PR-->
 
 # Why
 
-_Description of why you're opening this pull request._
+<!-- Briefly describe the motivation behind the changes introduced on this PR -->
 
 # How
 
-_Describe your approach to apply these changes._
+<!-- Describe the rationale for the changes introduced on this PR -->
 
 # Sample
 
-_You can attach images to show us the result, if applicable._
+<!-- Add screenshots or gifs when relevant -->
+
+# QA
+
+<!-- Add instructions for QA >
+
+<!-- ✅ TODOs -->
+<!-- Assign at least one manteiner to review this PR -->
+<!-- Assign everyone who worked on this PR -->
+
+<!-- EXTRAS -->
+<!-- 💸 Describe possible tech debits -->
+<!-- Jira link if needed -->

@@ -18,7 +18,6 @@ updates:
   - carlosberti
   - lopesalysson
   - pedro-cerdera
-  - caiogodoi
   assignees:
   - victorheringer
   - murillo94
@@ -28,7 +27,6 @@ updates:
   - carlosberti
   - lopesalysson
   - pedro-cerdera
-  - caiogodoi
   ignore:
   - dependency-name: eslint
     versions:
