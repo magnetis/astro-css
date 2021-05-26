@@ -1,6 +1,6 @@
 {
   "name": "@magnetis/astro-css",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Magnetis (https://github.com/magnetis)",
   "homepage": "https://astro.magnetis.com.br/",
   "description": "CSS Implementation of Magnetis design system",
@@ -62,7 +62,7 @@
     }
   },
   "lint-staged": {
-    "**/*.css": "stylelint --fix"
+    "src/css/**/*.css": "stylelint --fix"
   },
   "config": {
     "commitizen": {
