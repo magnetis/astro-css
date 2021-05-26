@@ -1,6 +1,27 @@
+os: linux
+dist: xenial
 language: node_js
 node_js:
-  - '11'
-install:
-  - yarn
-script: yarn ci:build
+- lts/*
+
+jobs:
+  include:
+  - stage: Lint
+    if: type = pull_request
+    install:
+    - yarn install
+    script: yarn lint
+
+  - stage: Deploy to NPM
+    if: tag IS present
+    install:
+    - yarn install
+    script: yarn ci:build
+    deploy:
+      provider: npm
+      email: $NPM_EMAIL
+      api_token:
+        secure: $NPM_KEY
+      cleanup: false
+      on:
+        tags: true
