@@ -24,9 +24,10 @@
     "url": "https://github.com/magnetis/astro-css"
   },
   "scripts": {
-    "build": "postcss src/index.css -o dist/astro.css && svgo assets/icons/*.svg -o dist/assets/icons",
+    "build": "yarn svg:optimize && postcss src/index.css -o dist/astro.css",
     "lint": "stylelint src/css/**/*.css",
     "ci:build": "yarn lint && yarn build",
+    "svg:optimize": "scripts/optimize-svg.js",
     "prepare": "husky install"
   },
   "dependencies": {
