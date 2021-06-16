@@ -24,9 +24,10 @@
     "url": "https://github.com/magnetis/astro-css"
   },
   "scripts": {
-    "build": "postcss src/index.css -o dist/astro.css && svgo assets/icons/*.svg -o dist/assets/icons",
+    "build": "yarn svg:optimize && postcss src/index.css -o dist/astro.css",
     "lint": "stylelint src/css/**/*.css",
     "ci:build": "yarn lint && yarn build",
+    "svg:optimize": "scripts/optimize-svg.js",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -35,23 +36,19 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "autoprefixer": "^9.1.5",
-    "babel-eslint": "^10.0.3",
-    "babel-plugin-inline-import": "^3.0.0",
     "commitizen": "^4.2.4",
-    "cssnano": "^4.1.0",
+    "cssnano": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^6.5.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "postcss-cli": "^6.0.0",
-    "postcss-css-variables": "^0.14.0",
-    "postcss-import": "^12.0.0",
-    "postcss-url": "^8.0.0",
-    "stylelint": "^12.0.1",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-order": "^3.1.1",
+    "postcss": "^8.3.2",
+    "postcss-cli": "^8.3.0",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-import": "^14.0.0",
+    "postcss-url": "^10.1.0",
+    "stylelint": "^13.13.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "svgo": "^2.3.0",
     "text-mask-addons": "^3.8.0",
     "vanilla-text-mask": "^5.1.1"
@@ -68,5 +65,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }  
+  }
 }
