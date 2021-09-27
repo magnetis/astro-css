@@ -42,7 +42,7 @@
     "husky": "^7.0.1",
     "lint-staged": "^11.0.0",
     "postcss": "^8.3.2",
-    "postcss-cli": "^8.3.0",
+    "postcss-cli": "^9.0.0",
     "postcss-css-variables": "^0.18.0",
     "postcss-import": "^14.0.0",
     "postcss-url": "^10.1.0",
