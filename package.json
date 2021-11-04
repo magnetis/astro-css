@@ -34,7 +34,7 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
+    "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "commitizen": "^4.2.4",
     "cssnano": "^5.0.0",
