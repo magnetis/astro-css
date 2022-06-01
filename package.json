@@ -40,7 +40,7 @@
     "cssnano": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
+    "lint-staged": "^13.0.0",
     "postcss": "^8.3.2",
     "postcss-cli": "^9.0.1",
     "postcss-css-variables": "^0.18.0",
