@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/config-conventional": "^17.4.2",
     "commitizen": "^4.2.4",
     "cssnano": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
